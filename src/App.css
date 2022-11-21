@@ -4,6 +4,7 @@ a{
 
 li{
     list-style-type: none;
+    min-width: max-content;
 }
 
 .title{
