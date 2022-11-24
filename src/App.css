@@ -7,6 +7,11 @@ li{
     min-width: max-content;
 }
 
+button{
+    border: none;
+    padding: 0.4em ;
+}
+
 .title{
     letter-spacing: 6px;
 }
