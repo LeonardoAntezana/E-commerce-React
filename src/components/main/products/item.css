@@ -1,4 +1,17 @@
+.producto{
+    max-width: 600px;
+    height: 150px;
+    background-color: #252c32;
+}
+
 .img-resp{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+}
+
+.producto__contenido{
+    width: 332px;
+}
+
+.producto__contenido .descrip{
+    font-size: 0.8em;
 }

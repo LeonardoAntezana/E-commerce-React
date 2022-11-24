@@ -22,7 +22,7 @@ function ItemListContainer( {gretting} ) {
     }, []
   )
   return (
-    <div>
+    <div className='bg-dark'>
       {gretting}
       <ItemList list={dataProducts}/>
     </div>
