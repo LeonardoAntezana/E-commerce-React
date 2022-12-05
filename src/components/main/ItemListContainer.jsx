@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
 // import ItemCount from './products/ItemCount'
 import ItemList from './ItemList'
+import { useParams } from 'react-router-dom'
 
 function ItemListContainer( {gretting} ) {
   const products = [
@@ -10,6 +11,7 @@ function ItemListContainer( {gretting} ) {
     {id:4, title: 'Grounded', description: 'Aventura, Supervivencia', price: 2400, pictureUrl: 'https://www.somosxbox.com/wp-content/uploads/2020/02/grounded_keyart.jpg'},
     {id:5, title: 'Red Dead Redemption 2', description: 'Accion, Aventura', price: 2000, pictureUrl: 'https://gamersrd.com/wp-content/uploads/2018/04/Red-Dead-Redemption-2-Rockstar-games-GamersRD.jpg'}
   ]
+  const {categoryId} = useParams()
   const [dataProducts, setDataProducts] = useState([]) 
   useEffect(() => {
       const data = () => {
@@ -18,14 +20,15 @@ function ItemListContainer( {gretting} ) {
         })
       }
 
-      data().then(res => setDataProducts(res))
-    }, []
-  )
+      data().then(res => {
+        categoryId ? setDataProducts(res.filter(producto => producto.description.toLowerCase().includes(categoryId))) : setDataProducts(res)
+      })
+    }, [categoryId])
   return (
-    <div className='bg-dark'>
+    <main className='bg-dark py-4'>
       {gretting}
       <ItemList list={dataProducts}/>
-    </div>
+    </main>
   )
 }
 
