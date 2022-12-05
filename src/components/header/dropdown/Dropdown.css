@@ -1,0 +1,41 @@
+.father__drop{
+    visibility: hidden;
+    transition: visibility 0.5s ease;
+}
+
+.dropdown{
+    min-width: 39rem;
+    top: 40px;
+    right: 0;
+    background-color: white;
+}
+
+.hover-link{
+    position: relative;
+    transition: color 0.7s ease-in-out;
+    z-index: 1;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.hover-link::before{
+    content: '';
+    background-color: #082032;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: -1;
+    height: 100%;
+    transition: all 0.7s ease-in-out;
+}
+
+.hover-link:hover::before{
+    width: 100%;
+}
+
+.hover-link:hover{
+    color: white;
+}
+
+
