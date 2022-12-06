@@ -1,7 +1,6 @@
 import React from 'react'
 import './main.css'
 import Item from './products/Item'
-import {Link} from 'react-router-dom'
 
 function ItemList( {list} ) {
   return (
@@ -9,7 +8,7 @@ function ItemList( {list} ) {
         <div className='d-flex flex-column gap-3'>
         {list.map(game => {
             return (
-                <Link key={game.id} className='link-item' to={`/item/${game.id}`}><Item item={game}/></Link>
+                <Item key={game.id} item={game}/>
             )
         })}
         </div>

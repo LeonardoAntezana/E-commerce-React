@@ -1,5 +1,6 @@
 import React from 'react'
 import './item.css'
+import {Link} from 'react-router-dom'
 
 function Item( {item} ) {
   const {title,description,price,pictureUrl} = item
@@ -12,6 +13,9 @@ function Item( {item} ) {
             <p className='descrip text-uppercase'>{description}</p>
             <span className='fs-6'>{price}</span>
           </div>
+          <Link className='link-item' to={`/item/${item.id}`}>
+            <button className='text-uppercase fs-6'>ver mas</button>
+          </Link>
         </div>
     </div>
   )
