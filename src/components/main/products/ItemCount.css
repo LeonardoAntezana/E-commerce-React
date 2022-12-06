@@ -1,5 +1,12 @@
+.item-count{
+    width: 200px;
+}
+
 .botonAdd{
     border: none;
     background-color: bisque;
-    color: white;
+}
+
+.botonAdd:hover{
+    background-color: white;
 }
