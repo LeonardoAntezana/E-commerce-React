@@ -5,7 +5,6 @@ import './ItemCount.css'
 
 function ItemCount( {stock, initial, onAdd} ) {
   const [cont, setCont] = useState(initial)
-  const [stockState, setStockState] = useState(stock)
   return (
     <div>
         <div className='d-flex'>
@@ -14,7 +13,7 @@ function ItemCount( {stock, initial, onAdd} ) {
             <button onClick={() => {cont < stock ? setCont(cont + 1): setCont(stock)}} className='d-flex align-items-center'><FaPlus/></button>
         </div>
         <button onClick={() => onAdd(cont)} className={`botonAdd btn ${stock === 0 && 'disabled'}`} >Add</button>
-        <p className='text-danger fst-italic'>El stock disponible es: {stockState}</p>
+        <p className='text-danger fst-italic'>El stock disponible es: {stock}</p>
     </div>
   )
 }
