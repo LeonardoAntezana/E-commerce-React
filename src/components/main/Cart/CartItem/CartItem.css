@@ -1,0 +1,17 @@
+.item__cart{
+    border-bottom: solid gray 2px;
+}
+
+.picture img{
+    width: 5rem;
+    height: 80px;
+}
+
+.titleItem__cart{
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+.boton__danger{
+    color: red;
+}
