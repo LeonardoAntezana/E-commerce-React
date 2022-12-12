@@ -1,6 +1,5 @@
 import {React, useEffect, useState} from 'react'
-// import ItemCount from './products/ItemCount'
-import ItemList from './ItemList'
+import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
 function ItemListContainer( {gretting} ) {
@@ -34,5 +33,3 @@ function ItemListContainer( {gretting} ) {
 
 export default ItemListContainer
 
-
-{/* <ItemCount stock={2} initial={1} onAdd={(elem)=> {console.log(elem)}}></ItemCount> */}
