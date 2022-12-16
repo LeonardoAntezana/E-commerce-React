@@ -3,21 +3,19 @@ import { useContext } from 'react'
 import { CartContext } from '../../../context/CartContext'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem/CartItem'
-import { useEffect } from 'react'
-import { useState } from 'react'
 
 function Cart() {
-    const {cart} = useContext(CartContext)
-    const [totalPrice, setTotalPrice] = useState()
-    useEffect(() => {
-        setTotalPrice(cart.reduce((sum,prod) => prod.price * prod.quantity + sum, 0))
-    }, [cart])
-  return (
-    <div className='container'>
-        {cart.length === 0 ? <Message/> : cart.map(item => <CartItem key={item.id} item={item}></CartItem>)}
-        {totalPrice !== 0 && <div className=' mt-3 d-flex justify-content-end'><p>${totalPrice}</p></div>}        
-    </div>
-  )
+    const {cart, totalPrice, clear} = useContext(CartContext)
+    if(cart.length === 0){
+        return (<Message/>)
+    }
+    return (
+        <div className='container'>
+            {cart.map(item => <CartItem key={item.id} item={item}/>)}
+            <div className=' mt-3 d-flex justify-content-end'><p>${totalPrice()}</p></div>
+            <p className='d-flex justify-content-center'><button onClick={() => clear()}>Vaciar carrito</button></p>        
+        </div>
+    )
 }
 
 // FUNCION DE MENSAJE DE CARRITO VACIO

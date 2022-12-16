@@ -15,7 +15,8 @@ function CartItem({item}) {
             <h3 className='text-center titleItem__cart'>{title}</h3>
         </div>
         <div className='d-flex flex-column justify-content-evenly'>
-            <p>${(price * quantity)}</p>
+            <p>Precio por producto: ${price}</p>
+            <p>Precio total: ${(price * quantity)}</p>
             <p>Cantidad: {quantity}</p>
         </div>
         <div className='d-flex justify-content-center align-items-center'>

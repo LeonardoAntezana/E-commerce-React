@@ -20,8 +20,12 @@ const CartContextProvider = ({children}) => {
     const removeItem = (itemId) => setCart(cart.filter(prod => prod.id !== itemId));
     // FUNCION PARA LIMPIAR CARRITO
     const clear = () => setCart([]);
+    // FUNCION PRECIO TOTAL DE LA COMPRA
+    const totalPrice = () => cart.reduce((sum, prod) => sum + prod.price * prod.quantity, 0)
+    // FUNCION PARA MOSTRAR CANTIDAD DE PRODUCTOS EN EL CARRITO
+    const quantityProducts = () => cart.reduce((sum, prod) => sum + prod.quantity, 0)
     return (
-        <CartContext.Provider value={{addItem, removeItem, clear, cart}}>
+        <CartContext.Provider value={{addItem, removeItem, clear, totalPrice, quantityProducts, cart}}>
             {children}
         </CartContext.Provider>
     )
