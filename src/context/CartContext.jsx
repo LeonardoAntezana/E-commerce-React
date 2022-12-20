@@ -4,11 +4,11 @@ export const CartContext = createContext([]);
 const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([])
     // FUNCION PARA BUSCAR SI EL PRODUCTO YA EXISTE EN EL CART
-    const exist = item => cart.some(prod => prod.id === item.id)
+    const exist = item => cart.some(prod => prod.categoryId === item.categoryId)
     // FUNCION PARA AGREGAR AL CART
     const addItem = (item, quantity) => {
         if(exist(item)){
-            let prod = cart.find(prod => prod.id === item.id)
+            let prod = cart.find(prod => prod.categoryId === item.categoryId)
             prod.quantity += quantity
             setCart([...cart])
         }

@@ -11,3 +11,12 @@
 .producto__contenido .descrip{
     font-size: 0.8em;
 }
+
+.btn__ver{
+    transition: all 0.2s;
+}
+
+.btn__ver:hover{
+    color: white;
+    background-color: black;
+}

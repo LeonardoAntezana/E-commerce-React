@@ -16,11 +16,11 @@ function CartItem({item}) {
         </div>
         <div className='d-flex flex-column justify-content-evenly'>
             <p>Precio por producto: ${price}</p>
-            <p>Precio total: ${(price * quantity)}</p>
+            <p>Precio total: ${Math.round((price * quantity))}</p>
             <p>Cantidad: {quantity}</p>
         </div>
         <div className='d-flex justify-content-center align-items-center'>
-            <button onClick={()=> removeItem(id)}><MdDelete className='boton__danger'/></button>
+            <button onClick={()=> removeItem(id)} className='contain__btn-danger'><MdDelete className='boton__danger'/></button>
         </div>
     </div>
   )

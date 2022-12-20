@@ -12,17 +12,17 @@ function ItemDetail( {item} ) {
     addItem(item,quant)
   }
 
-  const {title, description, price, pictureUrl} = item
+  const {title, description, price, pictureUrl, stock} = item
   return (
     <div className='bg-dark py-3 d-flex justify-content-center'>
       <div className='item-detail d-flex flex-column align-items-center gap-4'>
-        <div className='text-light d-flex flex-column align-items-center'>
-          <img className='img__detail' src={pictureUrl} alt={description} />
+        <div className='text-light d-flex flex-column align-items-center gap-2'>
+          <img className='img__detail' src={pictureUrl} alt={title} />
           <h2>{title}</h2>
           <p>{price}</p>
-          <p>{description}</p>
+          <p className='text-capitalize'>{description}</p>
         </div>
-        {quantity === undefined ? <ItemCount stock={2} initial={1} onAdd={onAdd}/> : <Link to={'/cart'}><button>Finalizar compra</button></Link>}
+        {quantity === undefined ? <ItemCount stock={stock} initial={1} onAdd={onAdd}/> : <Link to={'/cart'}><button>Finalizar compra</button></Link>}
       </div>
     </div>
   )

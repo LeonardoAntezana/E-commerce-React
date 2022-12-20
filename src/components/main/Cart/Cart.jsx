@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../../context/CartContext'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem/CartItem'
+import './CartItem/CartItem.css'
 
 function Cart() {
     const {cart, totalPrice, clear} = useContext(CartContext)
@@ -11,9 +12,12 @@ function Cart() {
     }
     return (
         <div className='container'>
-            {cart.map(item => <CartItem key={item.id} item={item}/>)}
-            <div className=' mt-3 d-flex justify-content-end'><p>${totalPrice()}</p></div>
-            <p className='d-flex justify-content-center'><button onClick={() => clear()}>Vaciar carrito</button></p>        
+            {cart.map((item, index) => <CartItem key={index} item={item}/>)}
+            <div className=' mt-3 d-flex justify-content-end'><p>Precio total del carrito: ${Math.round(totalPrice())}</p></div>
+            <div className='d-flex gap-3 justify-content-center'>
+                <button onClick={() => clear()} className='boton__vaciar'>Vaciar carrito</button>
+                <button className='boton__confirmar'>Confirmar compra</button>
+            </div>        
         </div>
     )
 }
@@ -22,7 +26,7 @@ function Cart() {
 const Message = () => 
     <div className='w-50 mx-auto py-3 d-flex flex-column align-items-center gap-3'>
         <p>El carrito esta vacio</p>
-        <Link to='/'><button>Volver al inicio</button></Link>
+        <Link to='/'><button className='boton__confirmar'>Volver al inicio</button></Link>
     </div>
 
 

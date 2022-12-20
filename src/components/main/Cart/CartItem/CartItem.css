@@ -12,6 +12,29 @@
     width: 400px;
 }
 
-.boton__danger{
+.contain__btn-danger:hover{
+    background-color: rgb(178, 173, 173);
+}
+
+.contain__btn-danger:hover .boton__danger{
     color: red;
+}
+
+.boton__danger{
+    transition: color 0.3s;
+    color: rgb(172, 9, 9);
+}
+
+.boton__vaciar, .boton__confirmar{
+    transition: all 0.3s;
+}
+
+.boton__vaciar:hover{
+    background-color: rgb(151, 50, 50);
+    color: white;
+}
+
+.boton__confirmar:hover{
+    background-color: rgb(18, 93, 18);
+    color: white;
 }

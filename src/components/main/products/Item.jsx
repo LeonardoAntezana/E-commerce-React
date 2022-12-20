@@ -14,7 +14,7 @@ function Item( {item} ) {
             <span className='fs-6'>{price}</span>
           </div>
           <Link className='link-item' to={`/item/${item.id}`}>
-            <button className='text-uppercase fs-6'>ver mas</button>
+            <button className='text-uppercase fs-6 btn__ver'>ver mas</button>
           </Link>
         </div>
     </div>
