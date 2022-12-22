@@ -16,3 +16,7 @@ button{
     padding: 0.4em ;
 }
 
+.btn.disabled{
+    background-color: white;
+}
+

@@ -11,7 +11,7 @@ function ItemDetailContainer({greeting}) {
       const data = getFirestore();
       const dataProduct = doc(data, 'items', itemId)
       getDoc(dataProduct).then(product => {
-        setItemState({...product.data()})
+        setItemState({id:product.id, ...product.data()})
       }) 
     },[itemId])
   return (
