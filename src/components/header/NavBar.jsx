@@ -21,7 +21,7 @@ function NavBar() {
   ]
   return (
     <header className='header'>
-      <nav className='container d-flex justify-content-between align-items-center'>
+      <nav className='py-3 container d-flex justify-content-between align-items-center'>
         <Link to='/'><span className='title fs-1 fw-bold text-light'>LUMUS</span></Link>
         <div className='d-flex gap-4 position-relative'>
           <ul className='p-0 m-0 d-flex gap-4'>

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CartContextProvider from './context/CartContext.jsx';
 import Cart from './components/main/Cart/Cart';
 import Checkout from './components/main/Checkout/Checkout';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -15,13 +16,14 @@ function App() {
         <CartContextProvider>
       <NavBar/>
         <Routes>
-          <Route exact path='/' element={<ItemListContainer gretting='Contenedor'/>}/>
-          <Route exact path='/category/:categoryId' element={<ItemListContainer gretting='Contenedor'/>}/>
-          <Route exact path='/item/:itemId' element={<ItemDetailContainer greeting={'Details'}/>}/>
+          <Route exact path='/' element={<ItemListContainer/>}/>
+          <Route exact path='/category/:categoryId' element={<ItemListContainer/>}/>
+          <Route exact path='/item/:itemId' element={<ItemDetailContainer/>}/>
           <Route exact path='/cart' element={<Cart/>}/>
           <Route exact path='/form' element={<Checkout/>}/>
         </Routes>
         </CartContextProvider>
+      <Footer/>
     </div>
   </BrowserRouter>
   );

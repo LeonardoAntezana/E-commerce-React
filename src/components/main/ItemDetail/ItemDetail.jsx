@@ -14,7 +14,7 @@ function ItemDetail( {item} ) {
 
   const {title, description, price, pictureUrl, stock} = item
   return (
-    <div className='bg-dark py-3 d-flex justify-content-center'>
+    <div className='d-flex justify-content-center'>
       <div className='item-detail d-flex flex-column align-items-center gap-4'>
         <div className='text-light d-flex flex-column align-items-center gap-2'>
           <img className='img__detail' src={pictureUrl} alt={title} />

@@ -20,7 +20,7 @@ function ItemListContainer( {gretting} ) {
       })}
     }, [categoryId])
   return (
-    <main className='bg-dark py-4'>
+    <main className='bg-dark py-5'>
       {gretting}
       <ItemList list={dataProducts}/>
     </main>

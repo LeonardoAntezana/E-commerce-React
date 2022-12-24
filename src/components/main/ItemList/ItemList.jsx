@@ -5,7 +5,7 @@ import Item from '../products/Item'
 function ItemList( {list} ) {
   return (
     <div className='container d-flex'>
-        <div className='d-flex flex-column gap-3'>
+        <div className='d-flex flex-column gap-4'>
         {list.map(game => {
             return (
                 <Item key={game.id} item={game}/>

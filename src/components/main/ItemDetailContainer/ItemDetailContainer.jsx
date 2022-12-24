@@ -15,7 +15,7 @@ function ItemDetailContainer({greeting}) {
       }) 
     },[itemId])
   return (
-    <div>
+    <div className='bg-dark py-5'>
         {greeting}
         <ItemDetail item={itemState}/>
     </div>
