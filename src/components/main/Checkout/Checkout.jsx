@@ -33,7 +33,7 @@ function FormOrder() {
         <form className='container d-flex flex-column align-items-center gap-4' onSubmit={(e) => e.preventDefault()}>
             <h3>Complete los datos para finalizar</h3>
             <div className='d-flex gap-4 flex-wrap justify-content-center'>
-                <input type="text" className='w-100' onChange={(event) => setNombre(event.target.value)} placeholder='Nombre y Apellido' required maxLength={50}/>
+                <input type="text" className='w-100' onChange={(event) => setNombre(event.target.value)} placeholder='Nombre (No menor de 6 caracteres)' required minLength={6} maxLength={50}/>
                 <input type="email" className='w-100' onChange={(event) => setEmail(event.target.value)} placeholder='Email' required/>
                 <input type="email" className='w-100' onChange={(event) => setEmailConfirm(event.target.value)} placeholder='Email confirm' required />
                 <input type="text" className='w-100' onChange={(event) => setDireccion(event.target.value)} placeholder='Direccion' required/>

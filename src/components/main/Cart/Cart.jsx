@@ -16,7 +16,7 @@ function Cart() {
             <div className='mb-3 d-flex fs-3 justify-content-end'><p className='p-2 bg-secondary'>Precio total del carrito: ${Math.round(totalPrice())}</p></div>
             <div className='d-flex gap-3 justify-content-center'>
                 <button onClick={() => clear()} className='boton__vaciar'>Vaciar carrito</button>
-                <Link to={'/form'}><button className='boton__confirmar'>Confirmar compra</button></Link>
+                <Link to={'/checkout'}><button className='boton__confirmar'>Confirmar compra</button></Link>
             </div>       
         </div>
     )
