@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 
 function ItemListContainer( {gretting} ) {
   const {categoryId} = useParams()
-  const [dataProducts, setDataProducts] = useState([]) 
+  const [dataProducts, setDataProducts] = useState(null) 
   useEffect(() => {
     const data = getFirestore()
     const productsCollection = collection(data, 'items')
@@ -19,6 +19,13 @@ function ItemListContainer( {gretting} ) {
         setDataProducts(res.docs.map(prod => ({id:prod.id, ...prod.data()})))
       })}
     }, [categoryId])
+    if(dataProducts === null){
+      return (
+        <main className='loading__items d-flex justify-content-center align-items-center'>
+            <p className='text-uppercase'>Cargando...</p>
+        </main>
+      )
+    }
   return (
     <main className='bg-dark py-5'>
       {gretting}

@@ -2,3 +2,7 @@
     width: max-content;
     margin: 0 auto 0 auto;
 }
+
+.loading__items{
+    height: 70vh;
+}
