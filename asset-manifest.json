@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PreEntrega2-LeonardoAntezana/static/css/main.7513038c.css",
-    "main.js": "/PreEntrega2-LeonardoAntezana/static/js/main.32f1ea76.js",
+    "main.css": "/PreEntrega2-LeonardoAntezana/static/css/main.d18552dc.css",
+    "main.js": "/PreEntrega2-LeonardoAntezana/static/js/main.72f9f6de.js",
     "static/js/787.ce3ad587.chunk.js": "/PreEntrega2-LeonardoAntezana/static/js/787.ce3ad587.chunk.js",
     "index.html": "/PreEntrega2-LeonardoAntezana/index.html",
-    "main.7513038c.css.map": "/PreEntrega2-LeonardoAntezana/static/css/main.7513038c.css.map",
-    "main.32f1ea76.js.map": "/PreEntrega2-LeonardoAntezana/static/js/main.32f1ea76.js.map",
+    "main.d18552dc.css.map": "/PreEntrega2-LeonardoAntezana/static/css/main.d18552dc.css.map",
+    "main.72f9f6de.js.map": "/PreEntrega2-LeonardoAntezana/static/js/main.72f9f6de.js.map",
     "787.ce3ad587.chunk.js.map": "/PreEntrega2-LeonardoAntezana/static/js/787.ce3ad587.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7513038c.css",
-    "static/js/main.32f1ea76.js"
+    "static/css/main.d18552dc.css",
+    "static/js/main.72f9f6de.js"
   ]
 }
