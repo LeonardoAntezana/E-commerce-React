@@ -1,6 +1,6 @@
 {
   "name": "lumus-app",
-  "homepage": "https://LeonardoAntezana.github.io/PreEntrega2-LeonardoAntezana",
+  "homepage": "http://mywebsite.com/relativepath",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
