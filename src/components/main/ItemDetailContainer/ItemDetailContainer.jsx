@@ -22,7 +22,7 @@ function ItemDetailContainer({greeting}) {
     )
   }
   return (
-    <div className='bg-dark py-5'>
+    <div style={{padding: '6rem 0'}}>
         {greeting}
         <ItemDetail item={itemState}/>
     </div>

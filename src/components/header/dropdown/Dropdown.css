@@ -8,6 +8,7 @@
     top: 40px;
     right: 0;
     background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hover-link{
@@ -36,6 +37,10 @@
 
 .hover-link:hover{
     color: white;
+}
+
+.category__top:hover{
+    background-color: grey;
 }
 
 

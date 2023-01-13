@@ -19,7 +19,7 @@ function Dropdown( {categories, className} ) {
 
 function DropItem( {title, url, subItems} ) {
     return(
-        <ul className='mt-2 p-0'><Link to={url}><span className='text-dark fw-bold'>{title}</span></Link>
+        <ul className='mt-2 p-0'><Link to={url}><span className='category__top text-dark py-1 px-2 fw-bold'>{title}</span></Link>
             {subItems.map((subItem, index) => {
                 return(
                     <li className='px-2 hover-link' key={index}>{subItem}</li>

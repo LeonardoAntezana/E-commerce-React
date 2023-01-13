@@ -8,8 +8,11 @@
 }
 
 .titleItem__cart{
-    text-overflow: ellipsis;
-    width: 400px;
+  width: 300px;
+}
+
+.item__precio{
+    width: 200px;
 }
 
 .contain__btn-danger:hover{

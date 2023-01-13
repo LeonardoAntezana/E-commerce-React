@@ -1,15 +1,13 @@
 .producto{
-    min-width: 600px;
-    height: 150px;
     background-color: #252c32;
 }
 
-.img-resp{
-    width: 220px;
+.container__productoImg{
+    height: 300px;
 }
 
-.producto__contenido .descrip{
-    font-size: 0.8em;
+.producto__contenido{
+    gap: 1rem;
 }
 
 .btn__ver{
@@ -19,4 +17,11 @@
 .btn__ver:hover{
     color: white;
     background-color: black;
+}
+
+@media screen and (min-width: 768px){
+    .producto__contenido{
+        gap: 0;
+        justify-content: space-around;
+    }
 }

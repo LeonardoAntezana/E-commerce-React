@@ -1,5 +1,5 @@
 .item-count{
-    width: 200px;
+    background-color: #082032;
 }
 
 .botonAdd{
@@ -9,4 +9,13 @@
 
 .botonAdd:hover{
     background-color: white;
+}
+
+.button-op{
+    background-color: rgb(150, 150, 231);  
+    transition: background-color 0.4s ease-in-out;
+}
+
+.button-op:hover{
+    background-color: rgb(91, 91, 163);    
 }

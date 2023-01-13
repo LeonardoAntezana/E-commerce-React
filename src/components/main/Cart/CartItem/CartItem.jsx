@@ -7,7 +7,7 @@ function CartItem({item}) {
     const {removeItem} = useContext(CartContext)
     const {id, title, pictureUrl, price, quantity} = item
   return (
-    <div className='item__cart py-3 d-flex justify-content-between'>
+    <div className='item__cart py-3 d-flex flex-column flex-md-row align-items-center justify-content-md-between'>
         <picture className='picture'>
             <img src={pictureUrl} alt={title} />
         </picture>
@@ -15,7 +15,7 @@ function CartItem({item}) {
             <h3 className='text-center titleItem__cart'>{title}</h3>
         </div>
         <div className='d-flex flex-column justify-content-evenly'>
-            <p>Precio por producto: ${price}</p>
+            <p className='item__precio'>Precio por producto: ${price}</p>
             <p>Precio total: ${Math.round((price * quantity))}</p>
             <p>Cantidad: {quantity}</p>
         </div>

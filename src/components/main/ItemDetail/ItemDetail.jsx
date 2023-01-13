@@ -16,10 +16,10 @@ function ItemDetail( {item} ) {
   return (
     <div className='d-flex justify-content-center'>
       <div className='item-detail d-flex flex-column align-items-center gap-4'>
-        <div className='text-light d-flex flex-column align-items-center gap-2'>
-          <img className='img__detail' src={pictureUrl} alt={title} />
+        <div className='d-flex flex-column align-items-center gap-3'>
+          <div className='img__detail'><img className='w-100 h-100' src={pictureUrl} alt={title} /></div>
           <h2>{title}</h2>
-          <p>{price}</p>
+          <p>${price}</p>
           <p className='text-capitalize'>{description}</p>
         </div>
         {quantity === undefined ? <ItemCount stock={stock} initial={1} onAdd={onAdd}/> : <p className='d-flex gap-3'><Link to={'/cart'}><button>Finalizar compra</button></Link><Link to={'/'}><button>Seguir comprando</button></Link></p>}

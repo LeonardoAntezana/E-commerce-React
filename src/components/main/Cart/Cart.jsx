@@ -13,8 +13,8 @@ function Cart() {
     return (
         <div className='container'>
             {cart.map((item, index) => <CartItem key={index} item={item}/>)}
-            <div className='mb-3 d-flex fs-3 justify-content-end'><p className='p-2 bg-secondary'>Precio total del carrito: ${Math.round(totalPrice())}</p></div>
-            <div className='d-flex gap-3 justify-content-center'>
+            <div className='mb-3 d-flex fs-3 justify-content-center text-center'><p className='p-2 bg-secondary'>Precio total del carrito: ${Math.round(totalPrice())}</p></div>
+            <div className='d-flex gap-3 justify-content-center mb-3'>
                 <button onClick={() => clear()} className='boton__vaciar'>Vaciar carrito</button>
                 <Link to={'/checkout'}><button className='boton__confirmar'>Confirmar compra</button></Link>
             </div>       

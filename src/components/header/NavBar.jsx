@@ -1,10 +1,12 @@
-import React from 'react'
+import { React, useState } from 'react'
 import CartWidget from './CartWidget'
 import Dropdown from './dropdown/Dropdown'
 import './header.css'
 import { Link } from 'react-router-dom'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 function NavBar() {
+  const [menuHamburguer, setMenuHamburguer] = useState(false)
   const lis = [
     { title: 'Accion', url: 'category/accion',
     subItems: ['Arcade y ritmo', 'Disparos en primera persona',
@@ -21,10 +23,10 @@ function NavBar() {
   ]
   return (
     <header className='header'>
-      <nav className='py-3 container d-flex justify-content-between align-items-center'>
+      <nav className='py-3 container d-flex justify-content-around align-items-center'>
         <Link to='/'><span className='title fs-1 fw-bold text-light'>LUMUS</span></Link>
-        <div className='d-flex gap-4 position-relative'>
-          <ul className='p-0 m-0 d-flex gap-4'>
+        <div className='d-none d-md-flex gap-4'>
+          <ul className='p-0 d-flex m-0 gap-4'>
             <li className='p-2'><Link className='navItem' to='/'>Tu tienda</Link></li>
             <li className='p-2'><Link className='navItem' to='/'>Nuevo y Destacable</Link></li>
             <li className='li__drop p-2'>
@@ -33,6 +35,13 @@ function NavBar() {
             </li>
           </ul>
           <CartWidget/>
+        </div>
+        <div className='d-md-none'>
+          <AiOutlineMenu color='#fff' size={20} onClick={() => setMenuHamburguer(state => !state)}/>
+          {menuHamburguer && 
+          <ul className='menu-hamburguer m-0 p-0 text-center d-flex flex-column'>{lis.map((el,index) => <Link key={index} to={el.url}>{el.title}</Link>)}
+          <li className='d-flex justify-content-center'><CartWidget/></li>
+          </ul>}
         </div>
     </nav>
     </header>
