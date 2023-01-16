@@ -4,7 +4,7 @@
 }
 
 .dropdown{
-    min-width: 39rem;
+    width: 39rem;
     top: 40px;
     right: 0;
     background-color: white;
@@ -13,10 +13,18 @@
 
 .hover-link{
     position: relative;
-    transition: color 0.7s ease-in-out;
     z-index: 1;
     cursor: pointer;
     width: fit-content;
+}
+
+.link--menu{
+    color: black;
+    transition: color 0.2s ease-in-out;
+}
+
+.link--menu:hover{
+    color: #fff;
 }
 
 .hover-link::before{
@@ -33,10 +41,6 @@
 
 .hover-link:hover::before{
     width: 100%;
-}
-
-.hover-link:hover{
-    color: white;
 }
 
 .category__top:hover{

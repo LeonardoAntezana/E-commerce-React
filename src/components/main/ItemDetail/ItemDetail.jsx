@@ -22,7 +22,7 @@ function ItemDetail( {item} ) {
           <p>${price}</p>
           <p className='text-capitalize'>{description}</p>
         </div>
-        {quantity === undefined ? <ItemCount stock={stock} initial={1} onAdd={onAdd}/> : <p className='d-flex gap-3'><Link to={'/cart'}><button>Finalizar compra</button></Link><Link to={'/'}><button>Seguir comprando</button></Link></p>}
+        {quantity === undefined ? <ItemCount stock={stock} initial={1} onAdd={onAdd}/> : <p className='d-flex gap-3'><Link to={'/cart'}><button className='button-confirm'>Finalizar compra</button></Link><Link to={'/'}><button className='button-buy'>Seguir comprando</button></Link></p>}
       </div>
     </div>
   )

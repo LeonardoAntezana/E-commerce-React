@@ -22,7 +22,7 @@ function DropItem( {title, url, subItems} ) {
         <ul className='mt-2 p-0'><Link to={url}><span className='category__top text-dark py-1 px-2 fw-bold'>{title}</span></Link>
             {subItems.map((subItem, index) => {
                 return(
-                    <li className='px-2 hover-link' key={index}>{subItem}</li>
+                    <li className='px-2 hover-link' key={index}><Link className='link--menu' to={`/category/${subItem.toLowerCase().replace(/\s+/g, '')}`}>{subItem}</Link></li>
                 )
             })}
         </ul>

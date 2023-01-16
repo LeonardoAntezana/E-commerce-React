@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react'
-import { collection, getDocs, getFirestore, query, where }from 'firebase/firestore'
+import { collection, getDocs, getFirestore }from 'firebase/firestore'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
@@ -10,10 +10,11 @@ function ItemListContainer( {gretting} ) {
     const data = getFirestore()
     const productsCollection = collection(data, 'items')
     if(categoryId){
-      const productsCollectionFilter = query(productsCollection, where('description', '==', categoryId))
-      getDocs(productsCollectionFilter).then(res => {
-        setDataProducts(res.docs.map(prod => ({id:prod.id, ...prod.data()})))
-      })}
+      getDocs(productsCollection).then(res => {
+         const productsFilter = res.docs.map(prod => ({id:prod.id, ...prod.data()}))
+        setDataProducts(productsFilter.filter(prod => categoryId.includes(prod.description)))
+      })
+    }
     else{
       getDocs(productsCollection).then(res => {
         setDataProducts(res.docs.map(prod => ({id:prod.id, ...prod.data()})))
@@ -27,7 +28,7 @@ function ItemListContainer( {gretting} ) {
       )
     }
   return (
-    <main className='bg-dark py-5'>
+    <main className='bg-dark py-5 main__products'>
       {gretting}
       <ItemList list={dataProducts}/>
     </main>
