@@ -26,7 +26,7 @@ function Cart() {
 const Message = () => 
     <div className='w-50 mx-auto my-4 py-3 d-flex flex-column align-items-center justify-content-center gap-3 container__noproducts'>
         <p className='fs-4'>El carrito esta vacio</p>
-        <Link to='/'><button className='boton__confirmar'>Volver al inicio</button></Link>
+        <Link to='/'><button className='button-buy'>Volver al inicio</button></Link>
     </div>
 
 export default Cart

@@ -25,10 +25,8 @@ function NavBar() {
     <header className='header'>
       <nav className='py-3 container d-flex justify-content-around align-items-center'>
         <Link to='/'><span className='title fs-1 fw-bold text-light'>LUMUS</span></Link>
-        <div className='d-none d-md-flex gap-4'>
+        <div className='d-none d-md-flex gap-4 position-relative'>
           <ul className='p-0 d-flex m-0 gap-4'>
-            <li className='p-2'><Link className='navItem' to='/'>Tu tienda</Link></li>
-            <li className='p-2'><Link className='navItem' to='/'>Nuevo y Destacable</Link></li>
             <li className='li__drop p-2'>
               <span className='navItem'>Categorias</span>
               <Dropdown categories={lis}/>
@@ -39,8 +37,8 @@ function NavBar() {
         <div className='d-md-none'>
           <AiOutlineMenu color='#fff' size={20} onClick={() => setMenuHamburguer(state => !state)}/>
           {menuHamburguer && 
-          <ul className='menu-hamburguer m-0 p-0 text-center d-flex flex-column'>{lis.map((el,index) => <Link key={index} to={el.url}>{el.title}</Link>)}
-          <li className='d-flex justify-content-center'><CartWidget/></li>
+          <ul className='menu-hamburguer m-0 p-0 text-center d-flex flex-column'>{lis.map((el,index) => <Link key={index} onClick={()=> setMenuHamburguer(false)} to={el.url}>{el.title}</Link>)}
+          <li className='d-flex justify-content-center' onClick={()=> setMenuHamburguer(false)}><CartWidget/></li>
           </ul>}
         </div>
     </nav>

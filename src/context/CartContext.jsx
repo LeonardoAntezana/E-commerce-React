@@ -1,8 +1,17 @@
-import {React , createContext, useState} from "react";
+import { useEffect } from "react";
+import {React , createContext, useState } from "react";
 export const CartContext = createContext([]); 
 
 const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([])
+
+    useEffect(() => {
+        const cartLocalStorage = localStorage.getItem('cart')
+        cartLocalStorage && setCart(JSON.parse(localStorage.getItem('cart')))
+    }, [])
+
+    useEffect(() => localStorage.setItem('cart', JSON.stringify(cart)), [cart])
+
     // FUNCION PARA BUSCAR SI EL PRODUCTO YA EXISTE EN EL CART
     const exist = item => cart.some(prod => prod.categoryId === item.categoryId)
     // FUNCION PARA AGREGAR AL CART

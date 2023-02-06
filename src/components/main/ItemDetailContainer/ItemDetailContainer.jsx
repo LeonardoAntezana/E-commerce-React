@@ -2,6 +2,7 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import { useState, useEffect, React } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import {useParams} from 'react-router-dom'
+import { LineWave } from 'react-loader-spinner'
 
 function ItemDetailContainer({greeting}) {
     const { itemId } = useParams()
@@ -17,7 +18,7 @@ function ItemDetailContainer({greeting}) {
   if(itemState === null){
     return (
       <main className='loading__items d-flex justify-content-center align-items-center'>
-          <p className='text-uppercase'>Cargando producto...</p>
+          <LineWave height='100' width='100' color='#082032'/>
       </main>
     )
   }
