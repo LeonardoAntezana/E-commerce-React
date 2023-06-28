@@ -7,13 +7,13 @@ function Item( {item} ) {
   return (            
     <div className="producto py-3 px-2 text-light row rounded">
         <div className='container__productoImg col-12 col-md-6'>
-          <img className='w-100 h-100 rounded' src={pictureUrl} alt={title}></img>
+          <img className='h-100 w-100 img-fluid rounded' src={pictureUrl} alt={title}></img>
         </div>
         <div className="producto__contenido col-12 col-md-6 d-flex flex-column align-items-center">
-          <h2 className='mt-3 fs-5'>{title}</h2>
-          <div className='text-center'>
+          <h2 className='mt-3 text-uppercase text-center product__title'>{title}</h2>
+          <div className='d-flex flex-column text-center gap-3'>
             <p className='descrip text-uppercase'>{description}</p>
-            <span className='fs-6'>{price}</span>
+            <span className='price'>${price}</span>
           </div>
           <Link className='link-item' to={`/item/${item.id}`}>
             <button className='text-uppercase fs-6 btn__ver'>ver mas</button>

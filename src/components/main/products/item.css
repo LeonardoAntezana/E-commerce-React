@@ -1,22 +1,50 @@
 .producto{
     background-color: #252c32;
+    margin: 0 4px;
 }
 
 .container__productoImg{
     height: 300px;
+    max-width: 500px;
 }
 
 .producto__contenido{
     gap: 1rem;
 }
 
+.product__title{
+    font-size: 2rem;
+}
+
+.price{
+    font-size: 2rem;
+}
+
 .btn__ver{
-    transition: all 0.2s;
+    position: relative;
+    padding: 0.8rem;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.btn__ver::before{
+    position: absolute;
+    content: '';
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn__ver:hover{
     color: white;
+}
+
+.btn__ver:hover::before{
     background-color: black;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px){

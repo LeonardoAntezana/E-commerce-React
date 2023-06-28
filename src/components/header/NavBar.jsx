@@ -28,7 +28,7 @@ function NavBar() {
         <div className='d-none d-md-flex gap-4 position-relative'>
           <ul className='p-0 d-flex m-0 gap-4'>
             <li className='li__drop p-2'>
-              <span className='navItem'>Categorias</span>
+              <span className='navItem fs-5'>Categorias</span>
               <Dropdown categories={lis}/>
             </li>
           </ul>
